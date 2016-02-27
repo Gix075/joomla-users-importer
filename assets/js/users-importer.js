@@ -7,6 +7,7 @@ function postFormData() {
 	$('#userImporterFormSend').on('click', function (e) {
 		e.preventDefault();
 		$('#messageBox').removeClass('alert-danger');
+		$('#messageBox').removeClass('alert-warning');
 		$('#messageBox').removeClass('alert-success');
 		$('#messageBox').addClass('alert alert-info');
 		$('#messageBox').text('Elaboro Richiesta');
@@ -20,12 +21,18 @@ function postFormData() {
 			dataType: 'json',
 			success: function(data) {
 				setTimeout(function() {
+					
 					switch(data.result) {
 						case "fail":
 							resultMessage += "<h4>Error</h4>";
 							$('#messageBox').removeClass('alert-info');
 							$('#messageBox').addClass('alert-danger');
 							break;
+						case "warning":
+							resultMessage += "<h4>Warning</h4>";
+							$('#messageBox').removeClass('alert-info');
+							$('#messageBox').addClass('alert-warning');
+							break;	
 						case "success":
 							resultMessage += "<h4>Success</h4>";
 							$('#messageBox').removeClass('alert-info');

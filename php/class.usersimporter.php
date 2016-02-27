@@ -2,7 +2,7 @@
 
 /**
  * *****************************************************************
- * UPLOAD JOOMLA USERS CLASS (version 2.0.0-beta1)
+ * UPLOAD JOOMLA USERS CLASS (version 2.0.0)
  * by Gix075 
  * *****************************************************************
  */
@@ -10,32 +10,39 @@
 class UploadJoomlaUsers  {
 	
 	function __construct($db) {
+		
+		// DB settings
 		$this->dbHost = $db['host'];           
 		$this->dbName = $db['name'];          
 		$this->dbUser = $db['username'];      
 		$this->dbPass = $db['password'];
 		$this->dbUsersTable = $db['userstable'];
 		$this->dbGroupTable = $db['usergrouptable'];
+		$this->db = $this->dbConnect();
+		
 		// User settings
 		$this->dbGroupId = intval($db['usersgroup']);
 		$this->usersActivation = intval($db['usersactivation']); 
 		$this->usersBlocked = intval($db['usersblocked']);
 		$this->usersSendEmail = intval($db['userssendmail']);
 		$this->userPswdReset = intval($db['usersreset']);
-		$this->db = $this->dbConnect();
+				
+		// Upload Results
 		$this->result = array();
 		$this->result['result'] = "";
 		$this->result['message'] = "";
 		$this->result['logs'] = null;
+		
+		// Logs
 		$this->LogFile = "logs/log__".date(dFY)."_".date(His).".txt";
 		$this->Logs->UsersInsert = array();
 		$this->Logs->UsersGroupInsert = array();
-		
 		$this->LogFileIntro = "\n";
 		$this->LogFileIntro .= "+-----------------------------------------------------+\n";
 		$this->LogFileIntro .= "	UPLOAD JOOMLA USER LOG\n";
 		$this->LogFileIntro .= "	date: ".date(dFY)." time: ".date(H.i.s)."\n";
 		$this->LogFileIntro .= "+-----------------------------------------------------+\n";
+	
 	}
 	
 	/* Database Connection */
@@ -141,7 +148,7 @@ class UploadJoomlaUsers  {
 		
 		// WARNING: Some records are failed
 		if ($users_isert_error > 0 && $users_isert_success > 0) {
-			$this->result['result'] = "success";
+			$this->result['result'] = "warning";
 			$this->result['message'] = $users_isert_success." users added on database, but ".$users_isert_error." users insert are failed! See logs for mor info.";		
 		}
 		
