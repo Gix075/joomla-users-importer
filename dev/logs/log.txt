@@ -1,0 +1,4 @@
+LOGFILES Directory
+............................................................................
+LOG Files will be saved inside this directory. 
+Remember that this directory must be writable by the webserver
