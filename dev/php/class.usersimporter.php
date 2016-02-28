@@ -1,12 +1,7 @@
 <?php
 
-/**
- * *****************************************************************
- * UPLOAD JOOMLA USERS CLASS (version 2.0.0)
- * by Gix075 
- * *****************************************************************
- */
- 
+//{BANNER}
+
 class UploadJoomlaUsers  {
 	
 	function __construct($db) {

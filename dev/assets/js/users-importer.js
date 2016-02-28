@@ -1,3 +1,5 @@
+//{BANNER}
+
 $(document).on('ready', function(){
 	getDocumentation();
 	postFormData();
@@ -15,7 +17,7 @@ function postFormData() {
 		var resultMessage = "";
 		
 		$.ajax({
-			url: 'php/ws.users-importer.php',
+			url: 'php/ws.usersimporter.php',
 			type: 'POST',
 			data: $('#userImporterForm').serialize(),
 			dataType: 'json',

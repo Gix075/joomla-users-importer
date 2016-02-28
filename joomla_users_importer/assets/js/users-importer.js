@@ -1,3 +1,12 @@
+/*! 
+ * ************************************************************************************ 
+ *  Joomla Users Importer | Import users from CSV file into Joomla 3 database 
+ *  Version 2.0.1 - Date: 28/02/2016 
+ *  HomePage: https://github.com/Gix075/joomla-users-importer#readme 
+ * ************************************************************************************ 
+*/ 
+
+
 $(document).on('ready', function(){
 	getDocumentation();
 	postFormData();
@@ -15,7 +24,7 @@ function postFormData() {
 		var resultMessage = "";
 		
 		$.ajax({
-			url: 'php/ws.users-importer.php',
+			url: 'php/ws.usersimporter.php',
 			type: 'POST',
 			data: $('#userImporterForm').serialize(),
 			dataType: 'json',
