@@ -1,4 +1,4 @@
-# joomla3 Users Importer
+# joomla3 Users Importer (version 2.0.1)
 Import users from CSV file into Joomla 3 database
 
 I've developed this tool for a massive users upload into some different joomla3 websites.<br>
