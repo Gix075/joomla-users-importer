@@ -1,7 +1,7 @@
 {
   "name": "joomla-users-importer",
   "title": "Joomla Users Importer",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Import users from CSV file into Joomla 3 database",
   "main": "index.html",
   "scripts": {

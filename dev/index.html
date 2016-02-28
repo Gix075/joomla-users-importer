@@ -89,7 +89,7 @@
 				</div>
 				<div class="col-md-3">
 					<div class="form-group">
-						<label for="usersgroup"><i class="fa fa-users"></i> DB Users Group</label>
+						<label for="usersgroup"><i class="fa fa-users"></i> Users Group</label>
 						<select name="usersgroup" class="form-control">
 							<option value="0">None</option>
 							<option value="2">Registred</option>
@@ -106,7 +106,7 @@
 				
 				<div class="col-md-2">
 					<div class="form-group">
-						<label for="usersblocked"><i class="fa fa-user-times"></i> DB Users Blocked</label>
+						<label for="usersblocked"><i class="fa fa-user-times"></i> Users Blocked</label>
 						<select name="usersblocked" class="form-control">
 							<option value="0">No</option>
 							<option value="1">Yes</option>
@@ -116,7 +116,7 @@
 				
 				<div class="col-md-2">
 					<div class="form-group">
-						<label for="usersactivation"><i class="fa fa-unlock-alt"></i> Users Activation</label>
+						<label for="usersactivation"><i class="fa fa-unlock-alt"></i> Users Require Activation</label>
 						<select name="usersactivation" class="form-control">
 							<option value="0">No</option>
 							<option value="1">Yes</option>
@@ -126,7 +126,7 @@
 				
 				<div class="col-md-2">
 					<div class="form-group">
-						<label for="userssendmail"><i class="fa fa-envelope"></i> Users Send Email</label>
+						<label for="userssendmail"><i class="fa fa-envelope"></i> Users Recive Email</label>
 						<select name="userssendmail" class="form-control">
 							<option value="1">Yes</option>
 							<option value="0">No</option>
@@ -209,7 +209,25 @@
 			
 		</div>
 		
-		
+		<div id="modalConfirm" class="modal fade" tabindex="-1" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">Joomla Users Importer</h4>
+					</div>
+					<div class="modal-body">
+						<div id="modalContent">
+							
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button id="startImport" type="button" class="btn btn-primary">Continue and Import Users</button>
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
 		
 		<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>	
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>

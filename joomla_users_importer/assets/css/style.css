@@ -1,7 +1,7 @@
 /*! 
  * ************************************************************************************ 
  *  Joomla Users Importer | Import users from CSV file into Joomla 3 database 
- *  Version 2.0.1 - Date: 28/02/2016 
+ *  Version 2.0.2 - Date: 28/02/2016 
  *  HomePage: https://github.com/Gix075/joomla-users-importer#readme 
  * ************************************************************************************ 
 */ 
@@ -25,10 +25,13 @@ hr {
 
 .alert {
 	margin-bottom: 0;
+	font-weight: 700;
 }
 
 .alert h4 {
 	margin: 0;
+	font-size: 2em;
+	font-weight: 700;
 }
 
 footer {
@@ -43,7 +46,7 @@ label {
 }
 
 .form-title {
-	margin: 20px 0;
+	margin: 10px 0;
 	text-transform: uppercase;
 	color: #999;
 }
@@ -75,6 +78,10 @@ label {
     		box-shadow: none;
 }
 
+.modal {
+	color: #333;
+}
+
 .alert-info {
     color: #fff;
     background-color: #999;
@@ -84,6 +91,11 @@ label {
 .margin-top {
 	margin-top: 20px;
 }
+
+.margin-bottom {
+	margin-bottom: 20px;
+}
+
 
 .align-right {
 	text-align: right;
