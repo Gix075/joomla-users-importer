@@ -31,3 +31,6 @@ node_modules
 
 # Optional REPL history
 .node_repl_history
+
+dev/php/dev_config.php
+dev/php/tester.php

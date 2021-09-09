@@ -25,6 +25,7 @@ module.exports = function(grunt) {
                     
                     '<%= pkg.distDir %>/php/class.usersimporter.php':'<%= pkg.devDir %>/php/class.usersimporter.php',
                     '<%= pkg.distDir %>/php/ws.usersimporter.php':'<%= pkg.devDir %>/php/ws.usersimporter.php',
+                    '<%= pkg.distDir %>/php/config.php':'<%= pkg.devDir %>/php/config.php',
                     
                     '<%= pkg.distDir %>/assets/css/style.css':'<%= pkg.devDir %>/assets/css/style.css',
                     '<%= pkg.distDir %>/assets/js/users-importer.js':'<%= pkg.devDir %>/assets/js/users-importer.js',

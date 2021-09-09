@@ -1,4 +1,4 @@
-# joomla3 Users Importer (version 2.0.2)
+# joomla3 Users Importer (version 3.0.0)
 Import users from CSV file into Joomla 3 database
 
 I've developed this tool for a massive users upload into some different joomla3 websites.<br>
@@ -8,9 +8,9 @@ I hope it can be useful for you too.<br>
 This tool import users from CSV/TXT file into Joomla3 database.<br>
 This tool require a file formatted as:
 ```
-Name1,Surname1,email1@email.xx
-Name2,Surname2,email2@email.xx
-Name3,Surname3,email3@email.xx
+Name1,Surname1,email1@email.xx,password
+Name2,Surname2,email2@email.xx,password
+Name3,Surname3,email3@email.xx,password
 ...
 ...
 ```
@@ -20,7 +20,7 @@ Joomla Users Importer will generate an **username** and a **password** for each 
 Each **username** will be generated unifying lowercase *"Name"* and *"Surname"* CSV columns, using an underscore *"_"*<br>
 **name1_surname1**
 
-Each **password** will be generated unifying username with a prefix *"password_"*<br>
+Each **password** (if you will use auto generated password) will be generated unifying username with a prefix *"password_"*<br>
 **password_name1_surname1**
 
 ## usage

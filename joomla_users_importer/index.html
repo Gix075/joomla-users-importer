@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<!-- Joomla Users Importer (v.2.0.2) | Import users from CSV file into Joomla 3 database -->
+		<!-- Joomla Users Importer (v.3.0.0) | Import users from CSV file into Joomla 3 database -->
 		<title>Joomla Users Importer</title>
 		<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -23,7 +23,7 @@
 				
 				<div class="col-md-2">
 					<p class="margin-top align-right">
-						<span class="label label-primary"><i class="fa fa-code-fork"></i> version 2.0.0</span> 
+						<span class="label label-primary"><i class="fa fa-code-fork"></i> version 3.0.0</span> 
 					</p>
 				</div>
 				
@@ -79,6 +79,12 @@
 						<input type="password" name="dbpassword" class="form-control" placeholder="password">
 					</div>
 				</div>
+
+                <div class="col-md-12">
+                    <input type="checkbox" name="dbconfigfile" value="1">
+                    <label for="dbconfig"><i class="fa fa-database"></i> Use config file</label>
+                    <p>Use the php/config.php file</p>
+                </div>
 				
 			</div>
 			
@@ -87,7 +93,7 @@
 				<div class="col-md-12">
 					<h4 class="form-title">Users Settings</h4>
 				</div>
-				<div class="col-md-3">
+				<div class="col-md-2">
 					<div class="form-group">
 						<label for="usersgroup"><i class="fa fa-users"></i> Users Group</label>
 						<select name="usersgroup" class="form-control">
@@ -102,6 +108,12 @@
 							<option value="9">Guest</option>
 						</select>
 					</div>
+
+                    <div class="form-group">
+                        <label for="usersmoregroups"><i class="fa fa-users"></i> Users Additional Groups</label>
+                        <input type="text" name="usersmoregroups" class="form-control">
+                        <p><small>Insert groups ids comma separated</small></p>
+                    </div>
 				</div>
 				
 				<div class="col-md-2">
@@ -134,10 +146,20 @@
 					</div>
 				</div>
 				
-				<div class="col-md-3">
+				<div class="col-md-2">
 					<div class="form-group">
 						<label for="usersreset"><i class="fa fa-key"></i> Users Require Pswd Reset</label>
 						<select name="usersreset" class="form-control">
+							<option value="0">No</option>
+							<option value="1">Yes</option>
+						</select>
+					</div>
+				</div>
+
+                <div class="col-md-2">
+					<div class="form-group">
+						<label for="userautopassword"><i class="fa fa-key"></i> Assign auto password</label>
+						<select name="userautopassword" class="form-control">
 							<option value="0">No</option>
 							<option value="1">Yes</option>
 						</select>
@@ -202,7 +224,7 @@
 			<div class="row">
 				<div class="col-md-12">
 					<footer>
-						&copy; 2016 by Gix075 | Released under MIT License
+						&copy; by Gix075 | Released under MIT License
 					</footer>
 				</div>
 			</div>

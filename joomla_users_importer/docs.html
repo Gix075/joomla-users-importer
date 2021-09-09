@@ -56,6 +56,10 @@
 				<strong><i class="fa fa-database"></i> DB Password</strong>: your joomla database password
 			</li>
 		</ul>
+        <p>
+            Alternatively it's possible to use a configuration file which must be named <code>config.php</code> and must be placed inside the <code>php</code> directory.<br>
+            In order to use this feature, please check on the form the "Use config file" checkbox. 
+        </p>
 		<h4>Users Fields</h4>
 		<ul>
 			<li>
@@ -74,6 +78,10 @@
 			<li>
 				<strong><i class="fa fa-key"></i> Users Require Pswd Reset</strong>:  coosing "Yes" all users will need a password rest at first login.
 			</li>
+
+            <li>
+				<strong><i class="fa fa-key"></i> Assign auto password</strong>:  coosing "Yes" if you want use an auto generated password (password_username).
+			</li>
 		</ul>
 		<h4>CSV Field</h4>
 		<ul>
@@ -87,9 +95,9 @@
 <pre>
 <code>
 Name,Surname,email@emaildomain.xx
-Name1,Surname1,email1@emaildomain.xx
-Name2,Surname2,email2@emaildomain.xx
-Name3,Surname3,email3@emaildomain.xx
+Name1,Surname1,email1@emaildomain.xx,plainpassword
+Name2,Surname2,email2@emaildomain.xx,plainpassword
+Name3,Surname3,email3@emaildomain.xx,plainpassword
 </code>
 </pre>
 		
