@@ -36,3 +36,6 @@ It's very easy and intuitive.
 
 ## logs
 After each import Joomla Users Importer will save a detailed logfile with a list of all added users. Log files will be saved inside `joomla-users-importer/logs` directory
+
+## WARNING!
+Names and/or surnames with some special chars as "D'Amico" will generate errors during import.
